@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><style type="text/css">body {
+  color: #fff;
+  font: 16px arial;
+  background-color: #222;
+}
+
+.objet {
+  width: 80%;
+  background-color: #4a4;
+  margin-bottom: 2px;
+  padding: 1em 0;
+}
+
+.grab-contenu {
+  color: #fff;
+  font: 16px arial;
+  background-color: #0aa;
+  margin: 1em;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 1em;
+}
+
+.grab-contenu:focus {
+  background-color: #0cc;
+}
+
+.spectacle-contenu {
+  font: 14px arial;
+}</style>
+
+
+<title>Detect Element's Child Location via Touch (Numeric)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <div class="contenu" align="center">
+    <input class="grab-contenu" type="text">
+    <div class="spectacle-contenu">
+      <div class="objet">première</div>
+      <div class="objet">deuxième</div>
+      <div class="objet">troisième</div>
+      <div class="objet">quatrième</div>
+      <div class="objet">cinquième</div>
+      <div class="objet">sixième</div>
+      <div class="objet">septième</div>
+      <div class="objet">huitième</div>
+      <div class="objet">neuvième</div>
+      <div class="objet">dixième</div>
+    </div>
+  </div>
+
+<script>$(document).ready(function() {
+  $(".spectacle-contenu").children().on('mousedown touchstart', function() {
+    $(".grab-contenu").val($(this).index() + 1);
+  });
+});</script></body>

@@ -1,0 +1,422 @@
+/* Import Required CSS Files */
+@import url("normalize.css");
+@import url("jquery-ui.min.css");
+@import url("css/hsla-picker.css");
+@import url("css/font-awesome.min.css");
+@import url("fonts/icomoon.css");
+@import url("http://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic");
+
+/* Main Tablet/Laptop UI */
+
+body {
+  overflow: hidden;
+}
+
+/* Fake Body */
+#dynamic-storage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 400px;
+  bottom: 0;
+  z-index: 0;
+  overflow: auto;
+}
+
+/* FunctionBar */
+#functionbar {
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 400px;
+  height: 100%;
+  padding: 0;
+  right: 0;
+  z-index: 998;
+}
+#functionbar #handlesbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  padding: 6px 0;
+  border-radius: 0;
+  font: 24px sans;
+  text-align: center;
+  background: hsla(180, 0%, 0%, .75);
+  word-spacing: 12px;
+  z-index: 999;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+#functionbar a {
+  text-decoration: none;
+}
+#handlesbar a {
+  color: hsl(180, 0%, 90%);
+}
+#functionbar .active {
+  color: #9cf;
+}
+#functionbar .hide {
+  display: none!important;
+}
+#functionbar .fill {
+  width: 100%;
+}
+
+/* Dialog Sec */
+#modual-hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #eee;
+}
+#modual-hint, #modual-hint h1 {
+  color: #878787;
+}
+#modual-hint header {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+#modual-hint nav {
+  display: table-cell;
+  vertical-align: middle;
+}
+#modual-hint h1, #modual-hint h3 {
+  margin: 10px 0;
+}
+#modual-hint h1 {
+  font-size: 60px;
+}
+#modual-hint h3 {
+  font-size: 16px;
+}
+
+#reveal {
+  position: absolute;
+  top: 41px;
+  margin: auto;
+  bottom: 0;
+  overflow: auto;
+}
+
+#reveal .notavailable, #reveal .element.notavailable:hover {
+  background: rgba(236, 236, 236, 0.8);
+}
+
+.blockme {
+  display: block;
+}
+
+#icon-options {
+  height: 300px;
+  overflow: auto;
+}
+
+#reveal .theme__poly {
+  width: 90%;
+  padding: 5%;
+}
+#reveal .grid {
+  color: #000;
+  font-size: 12px;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+}
+#reveal .grid__col--3 {
+  width: 20%; }
+#reveal .grid__col--4 {
+  width: 28.5%; }
+#reveal .grid__col--5 {
+  width: 33%; }
+#reveal .grid__col--6 {
+  width: 45.5%; }
+#reveal .grid__col--7 {
+  width: 57.5%; }
+#reveal .grid__col--8 {
+  width: 62%; }
+#reveal .grid__col--12 {
+  width: 96.7%;
+}
+
+#grid-options {
+  height: auto;
+  overflow: visibile;
+}
+
+#icon-options {
+  height: 140px;
+  overflow: auto;
+}
+
+#icon-options, #icon-options a {
+  float: left;
+}
+#icon-options a:not(#closeicondialog) {
+  display: inline-block;
+  font-size: 2em;
+  padding: .5em;
+}
+#closeicondialog {
+  display: block;
+  width: 100%;
+  font-size: 1.25em;
+  padding: .25em 0;
+  border-radius: 0;
+  margin: 0;
+}
+/* Styles Dialog */
+#stylescontent, #stylescontent .drop, #settingsmodual, #settingsmodual .drop, #reveal .hscroll a {
+  color: #666;
+}
+#stylescontent header, #settingsmodual header {
+  cursor: pointer;
+}
+#reveal .enabledoption {
+  color: #000;
+}
+
+/* Styles Menu's */
+#styleeffects input[type="radio"] {
+  display: none; 
+}
+#styleeffects label {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 0 10px 0;
+  background: hsl(180, 0%, 90%);
+}
+#styleeffects input[type="radio"]:checked + label { 
+  background: #9cf;
+  color: #000;
+}
+
+#functionbar textarea {
+  padding: 0;
+  width: 98%;
+  height: 100px;
+  font-size: 16px;
+  color: #000;
+  resize: vertical;
+}
+#reveal, #functionbar input[type=text], #functionbar textarea {
+  font-family: 'Ubuntu', latin;
+  background: #fff;
+}
+#functionbar input[type=text], #functionbar textarea {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  margin: 0 0 10px 0;
+}
+#functionbar input[type=text], #change-selected-tag, #confirm-style {
+  font-size: 24px;
+  color: #000;
+  width: 171px;
+}
+#functionbar #options > div input {
+  width: 90%;
+}
+
+/* Attributes Compartment */
+#editTagAttributes {
+  padding: 10px 0 0 0;
+}
+
+/* Selected Element */
+#dynamic-storage .selected {
+  outline: 2px dotted #69f;
+}
+
+/* Addable Elements */
+#addcontent {
+  text-align: center;
+}
+
+#addcontent .element, #editcontent .element {
+  cursor: pointer;
+  display: inline-table;
+  text-align: center;
+  padding: 30px 0 0 0;
+  float: left;
+  width: 125px;
+  height: 100px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  color: #262B2F;
+}
+#functionbar .element:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+#functionbar .element span {
+  font-size: 26px;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+#functionbar .element .fa.ubuntu {
+  font-family: 'Ubuntu', latin;
+}
+#add-search-component .fa-circle-thin {
+  font-size: 40px;
+}
+#add-search-component .fa-search {
+  top: -1px;
+  left: 1px;
+  font-size: 16px;
+}
+#functionbar .element hr {
+  margin-top: 35%;
+  border: 1px solid black;
+  background: black;
+}
+#functionbar .element .top-dot {
+  top: -25%;
+}
+#functionbar .element .bottom-dot {
+  top: 20%;
+}
+#functionbar .element .fa-caret-down, #functionbar .element .fa-caret-up {
+  font-size: 50%;
+}
+#functionbar .element .fa-minus {
+  font-size: 100%;
+}
+#functionbar .element h4 {
+  font-size: 14px;
+  font-family: 'Ubuntu', latin;
+}
+
+/* Fix Layout From Poly UI Inconsistancies*/
+#reveal h4 {
+  margin: 1.7em 0;
+  text-transform: capitalize;
+  color: #000;
+}
+#reveal input, #reveal textarea {
+  display: inline-block;
+  padding: 0;
+}
+#functionbar * {
+  box-sizing: content-box;
+}
+
+/* Horizontal Scrollbar */
+#reveal .hscroll {
+  display: inline-block;
+  width: 100%;
+  font-family: arial;
+  color: #fff;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+#reveal .hscroll a {
+  display: inline-block;
+  padding: .5em 1em;
+  background: hsl(180, 0%, 90%);
+}
+
+/* For Color Picker */
+#functionbar .picker, #functionbar .place-picker {
+  margin: 1em 0;
+}
+#functionbar .place-picker {
+  padding: 0 5%;
+  width: 90%;
+}
+
+/* Misc */
+#fsize-input {
+  background: transparent;
+  padding: 0;
+  width: 90%;
+}
+
+/* Phone UI */
+@media all and (max-width:900px) {
+  /* Fake Body */
+  #dynamic-storage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  /* FunctionBar */
+  #functionbar {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    right: 25px;
+    width: auto;
+    height: auto;
+  }
+
+  /* Dialog Sec */
+  #modual-hint {
+    display: none;
+  }
+  #reveal {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 40px auto;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+  }
+  #handlesbar {
+    border-radius: 10px 10px 0 0;
+  }
+  #addcontent .element, #editcontent .element {
+    float: none;
+  }
+  #functionbar input[type=text], #change-selected-tag, #confirm-style {
+    font-size: 24px;
+    color: #000;
+    width: 40%;
+  }
+  #reveal, #functionbar input[type=text], #functionbar textarea {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #grid-options {
+    height: 140px;
+    overflow: auto;
+  }
+  #reveal .theme__poly {
+    padding: 0 5%;
+  }
+}
+
+@media all and (max-width:570px) {
+  /* FunctionBar */
+  #functionbar {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    right: 25px;
+    width: auto;
+  }
+
+  /* Dialog Sec */
+  #reveal {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 40px auto;
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+  }
+}

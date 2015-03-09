@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Touch Based Web Based Web Design App Experiment</title>
+    <meta charset="utf-8">
+    <meta name="Description" content="A mobile web design application made for touch devices.">
+    <meta name="Keywords" content="mobile, website, design, prototyping, on, the, go, web, layout, make, design, create">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/polyui-mod.css" />
+    <script type="text/javascript" src="assets/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="assets/hsla-picker.js"></script>
+    <script src="assets/dist/jszip.min.js"></script>
+    <script src="assets/dist/FileSaver.js"></script>
+    <script src="assets/shortcut.js"></script>
+    <script type="text/javascript" src="assets/editor.js"></script>
+    <script src="assets/dialogs.js"></script>
+    <script src="assets/misc.js"></script>
+  </head>
+  <body>
+    <!-- FunctionBar -->
+    <div id="functionbar">
+      <img class="hide" src="http://mmd.sourceforge.net/preview.png" />
+      <div id="modual-hint">
+        <header>
+          <nav>
+            <h1 class="fa fa-arrow-circle-o-up"></h1>
+            <p>
+              select a modual above
+            </p>
+          </nav>
+        </header>
+      </div>
+      <div id="reveal" class="fill hide">
+        <!-- Add Elements & Components Modual -->
+        <div id="addcontent" class="hide">
+          <div id="editTagAttributes" class="hide" align="center">
+            <input type="text" class="selected-tag" placeholder="Tag type">
+            <a href="javascript:void(0)" id="change-selected-tag">
+              <span class="fa fa-check"></span>
+            </a>
+            <input type="text" class="selected-element" placeholder="Element class">
+            <p>
+              <textarea class="code hide"></textarea>
+            </p>
+          </div>
+          <div id="options">
+            <div id="icon-options" class="hide">
+              <a id="closeicondialog" class="btn--error" href="javascript:void(0)">Close</a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bitcoin"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bold"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bolt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bomb"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-book"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bookmark"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bookmark-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-briefcase"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-btc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bug"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-building"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-building-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bullhorn"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bullseye"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-bus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-buysellads"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cab"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-calculator"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-calendar"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-calendar-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-camera"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-camera-retro"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-car"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-square-o-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-square-o-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-square-o-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-square-o-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-caret-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cart-arrow-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cart-plus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-amex"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-discover"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-mastercard"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-paypal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-stripe"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cc-visa"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-certificate"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chain"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chain-broken"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-check"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-check-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-check-circle-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-check-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-check-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-circle-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-circle-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-circle-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-circle-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-chevron-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-child"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-circle-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-circle-o-notch"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-circle-thin"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-clipboard"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-clock-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-close"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cloud"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cloud-download"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cloud-upload"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cny"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-code"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-code-fork"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-codepen"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-coffee"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cog"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cogs"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-columns"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-comment"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-comment-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-comments"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-comments-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-compass"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-compress"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-connectdevelop"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-copy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-copyright"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-credit-card"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-crop"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-crosshairs"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-css3"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cube"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cubes"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cut"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-cutlery"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dashboard"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dashcube"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-database"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dedent"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-delicious"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-desktop"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-deviantart"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-diamond"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-digg"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dollar"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dot-circle-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-download"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dribbble"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-dropbox"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-drupal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eject"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ellipsis-h"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ellipsis-v"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-empire"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-envelope"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-envelope-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eraser"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eur"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-euro"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-exchange"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-exclamation"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-exclamation-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-exclamation-triangle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-expand"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-external-link"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-external-link-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eye"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eye-slash"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-eyedropper"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-facebook-f"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-facebook-official"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-facebook-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fast-backward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fast-forward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fax"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-female"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fighter-jet"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-archive-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-audio-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-code-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-excel-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-image-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-movie-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-pdf-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-photo-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-picture-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-powerpoint-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-sound-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-text"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-text-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-video-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-word-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-zip-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-files-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-film"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-filter"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fire"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-fire-extinguisher"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flag"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flag-checkered"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flag-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flash"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flask"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-flickr"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-floppy-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-folder"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-folder-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-folder-open"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-folder-open-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-font"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-forumbee"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-forward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-foursquare"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-frown-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-futbol-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gamepad"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gavel"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gbp"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ge"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gear"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gears"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-genderless"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gift"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-git"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-git-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-github-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-github-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gittip"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-glass"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-globe"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-google"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-google-plus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-google-plus-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-google-wallet"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-graduation-cap"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-gratipay"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-group"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-h-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hacker-news"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hand-o-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hand-o-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hand-o-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hand-o-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hdd-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-header"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-headphones"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-heart"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-heart-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-heartbeat"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-history"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-home"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hospital-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-hotel"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-html5"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ils"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-image"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-inbox"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-indent"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-info"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-info-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-inr"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-institution"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ioxhost"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-italic"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-joomla"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-jpy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-jsfiddle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-key"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-keyboard-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-krw"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-language"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-laptop"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lastfm"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lastfm-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-leaf"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-leanpub"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-legal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lemon-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-level-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-level-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-life-bouy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-life-buoy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-life-ring"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-life-saver"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lightbulb-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-line-chart"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-link"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-linkedin-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-linux"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-list"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-list-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-list-ol"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-list-ul"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-location-arrow"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lock"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-long-arrow-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-long-arrow-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-long-arrow-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-long-arrow-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-magic"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-magnet"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mail-forward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mail-reply"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mail-reply-all"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-male"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-map-marker"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mars"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mars-double"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mars-stroke"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mars-stroke-h"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mars-stroke-v"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-maxcdn"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-meanpath"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-medium"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-medkit"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-meh-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mercury"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-microphone"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-microphone-slash"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-minus-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-minus-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-minus-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mobile"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mobile-phone"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-money"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-moon-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-mortar-board"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-motorcycle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-music"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-navicon"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-neuter"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-newspaper-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-openid"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-outdent"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pagelines"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paint-brush"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paper-plane"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paper-plane-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paperclip"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paragraph"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paste"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pause"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paw"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-paypal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pencil"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pencil-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pencil-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-phone"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-phone-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-photo"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-picture-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pie-chart"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pied-piper"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pied-piper-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pinterest"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pinterest-p"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-pinterest-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plane"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-play"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-play-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-play-circle-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plug"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plus-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plus-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-plus-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-power-off"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-print"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-puzzle-piece"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-qq"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-qrcode"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-question"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-question-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-quote-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-quote-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ra"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-random"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rebel"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-recycle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-reddit"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-reddit-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-refresh"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-remove"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-renren"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-reorder"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-repeat"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-reply"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-reply-all"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-retweet"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rmb"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-road"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rocket"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rotate-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rotate-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rouble"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rss"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rss-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rub"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ruble"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-rupee"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-save"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-scissors"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-search"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-search-minus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-search-plus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sellsy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-send"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-send-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-server"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-share"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-share-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-share-alt-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-share-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-share-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-shekel"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sheqel"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-shield"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ship"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-shirtsinbulk"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sign-in"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sign-out"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-signal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-simplybuilt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sitemap"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-skyatlas"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-skype"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-slack"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sliders"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-slideshare"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-smile-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-soccer-ball-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-alpha-asc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-alpha-desc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-amount-asc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-amount-desc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-asc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-desc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-numeric-asc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-numeric-desc"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sort-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-soundcloud"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-space-shuttle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-spinner"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-spoon"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-spotify"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-square-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stack-exchange"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stack-overflow"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star-half"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star-half-empty"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star-half-full"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star-half-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-star-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-steam"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-steam-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-step-backward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-step-forward"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stethoscope"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stop"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-street-view"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-strikethrough"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stumbleupon"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-stumbleupon-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-subscript"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-subway"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-suitcase"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-sun-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-superscript"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-support"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-table"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tablet"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tachometer"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tag"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tags"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tasks"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-taxi"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tencent-weibo"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-terminal"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-text-height"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-text-width"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-th"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-th-large"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-th-list"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-thumb-tack"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-thumbs-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-thumbs-o-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-thumbs-o-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-thumbs-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-ticket"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-times"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-times-circle"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-times-circle-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tint"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-left"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-off"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-on"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-right"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-toggle-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-train"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-transgender"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-transgender-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-trash"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-trash-o"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tree"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-trello"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-trophy"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-truck"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-try"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tty"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tumblr"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-tumblr-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-turkish-lira"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-twitch"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-umbrella"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-underline"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-undo"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-university"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-unlink"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-unlock"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-unlock-alt"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-unsorted"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-upload"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-usd"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-user"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-user-md"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-user-plus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-user-secret"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-user-times"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-users"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-venus"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-venus-double"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-venus-mars"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-viacoin"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-video-camera"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-vimeo-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-vine"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-vk"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-volume-down"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-volume-off"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-volume-up"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-warning"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-wechat"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-weibo"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-weixin"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-whatsapp"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-wheelchair"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-wifi"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-windows"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-won"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-wordpress"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-wrench"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-xing"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-xing-square"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-yahoo"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-yelp"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-yen"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-youtube"></i>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+              <p>&nbsp;</p>
+            </div>
+            <div id="select-options" class="hide">
+              <div id="handle-select-options"></div>
+              <input id="new-select-option" type="text"/>
+
+              <p>
+                <a id="add-select-option" class="btn--default" href="javascript:void(0)">Add Option</a>
+              </p>
+            </div>
+            <div id="ul-options" class="hide">
+              <div id="handle-ul-options"></div>
+              <input id="new-ulli-text" type="text"/>
+
+              <p>
+                <a id="add-ul-option" class="btn--default" href="javascript:void(0)">Add Option</a>
+              </p>
+            </div>
+            <div id="ol-options" class="hide">
+              <div id="handle-ol-options"></div>
+              <input id="new-olli-text" type="text"/>
+
+              <p>
+                <a id="add-ol-option" class="btn--default" href="javascript:void(0)">Add Option</a>
+              </p>
+            </div>
+            <div id="link-options" class="hide">
+              <input class="selectallthistxt" id="link-name-val" type="text" placeholder="name"/>
+              <input class="selectallthistxt" id="link-href-val" type="text" placeholder="href"/>
+            </div>
+            <div id="img-options" class="hide">
+              <input class="selectallthistxt" id="img-src-val" type="text" placeholder="src"/>
+            </div>
+            <div id="video-options" class="hide">
+              <input class="selectallthistxt" id="iframe-width-val" type="text" placeholder="width"/>
+              <input class="selectallthistxt" id="iframe-height-val" type="text" placeholder="height"/><br>
+              <input class="selectallthistxt" id="iframe-src-val" type="text" placeholder="src"/>
+            </div>
+            <div id="input-options" class="hide">
+              <input class="selectallthistxt" id="input-val" type="text" placeholder="value"/>
+              <input class="selectallthistxt" id="input-placeholder-val" type="text" placeholder="placeholder"/>
+            </div>
+            <div id="textarea-options" class="hide">
+              <input class="selectallthistxt" id="textarea-placeholder-val" type="text" placeholder="placeholder" />
+              <textarea class="selectallthistxt" id="textarea-val" placeholder="value"></textarea>
+            </div>
+            <div id="custom-options" class="hide">
+              <textarea id="custom-html" placeholder="Your custom html goes here..."></textarea>
+
+              <p>
+                <a id="add-custom-html" class="btn--default" href="javascript:void(0)">Add HTML</a>
+              </p>
+            </div>
+            <div id="email-options" class="hide">
+              <input class="form__input youremail" type="email" id="email" placeholder="email@website.com">
+              <textarea class="form__input yourmessage" id="msg" placeholder="Confirmational message to send after email has been sent." rows="7"></textarea>
+
+              <p>
+                <a id="add-email-modual" class="btn--default" href="javascript:void(0)">Add Email Modual</a>
+              </p>
+            </div>
+            <div id="tabs-options" class="hide">
+              Tabs Modual Coming Soon...
+              
+              <p>
+                <a id="tabs-change" class="btn--default" href="javascript:void(0)">Submit Changes</a>
+              </p>
+            </div>
+            <div id="grid-options" class="hide">
+              <div class="theme__poly">
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--12">.grid__col--12</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--12">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--6">.grid__col--6</div>
+                  <div class="grid__col--6">.grid__col--6</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--6">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--6">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--4">.grid__col--4</div>
+                  <div class="grid__col--4">.grid__col--4</div>
+                  <div class="grid__col--4">.grid__col--4</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--4">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--4">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--4">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--3">.grid__col--3</div>
+                  <div class="grid__col--3">.grid__col--3</div>
+                  <div class="grid__col--3">.grid__col--3</div>
+                  <div class="grid__col--3">.grid__col--3</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--3">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--3">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--3">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--3">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--5">.grid__col--5</div>
+                  <div class="grid__col--7">.grid__col--7</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--5">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--7">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="grid__col--8">.grid__col--8</div>
+                  <div class="grid__col--4">.grid__col--4</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="grid__col--8">
+                      <span>Placer</span>
+                    </div>
+                    <div class="grid__col--4">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="grid" href="javascript:void(0)">
+                  <div class="centered grid__col--7">.centered .grid__col--7</div>
+                </a>
+                <div class="hide add-element">
+                  <div class="grid">
+                    <div class="centered grid__col--7">
+                      <span>Placer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <span id="add-box" class="element">
+            <span class="fa fa-square"></span>
+            <h4>Box</h4>
+          </span>
+          <div class="hide add-element">
+            <div class="header">
+              <h1>Welcome</h1>
+              <h5>Hope you enjoy MMD v2 :)</h5>
+            </div>
+          </div>
+
+          <span id="add-grid" class="element gridforlayout">
+            <span class="fa fa-columns"></span>
+            <h4>Grid</h4>
+          </span>
+          <span id="add-text" class="element">
+            <span class="fa ubuntu">T</span>
+            <h4>Text</h4>
+          </span>
+          <div class="hide add-element">
+            <span>
+              Welcome!
+            </span>
+          </div>
+          <span id="add-header" class="element">
+            <span class="fa fa-header"></span>
+            <h4>Header</h4>
+          </span>
+          <div class="hide add-element">
+            <h1>
+              Welcome!
+            </h1>
+          </div>
+          <span id="add-blockquote" class="element">
+            <span class="fa ubuntu">B</span>
+            <h4>Blockquote</h4>
+          </span>
+          <div class="hide add-element">
+            <blockquote>
+              I'm a blockquote!
+            </blockquote>
+          </div>
+
+          <span id="add-button" class="element">
+            <span class="fa icon-button"></span>
+            <h4>Button</h4>
+          </span>
+          <div class="hide add-element">
+            <button class="btn--default">button</button>
+          </div>
+          <span id="add-ul-li" class="element">
+            <span class="fa fa-list-ul"></span>
+            <h4>Unordered List</h4>
+          </span>
+          <div class="hide add-element">
+            <ul>
+              <li>water</li>
+              <li>apples</li>
+              <li>oranges</li>
+            </ul>
+          </div>
+          <span id="add-ol-li" class="element">
+            <span class="fa fa-list-ol"></span>
+            <h4>Ordered List</h4>
+          </span>
+          <div class="hide add-element">
+            <ol>
+              <li>water</li>
+              <li>apples</li>
+              <li>oranges</li>
+            </ol>
+          </div>
+
+          <span id="add-link" class="element">
+            <span class="fa fa-link"></span>
+            <h4>Link</h4>
+          </span>
+          <div class="hide add-element">
+            <a href="http://mikethedj4.github.io/">Visit Developers Website!</a>
+          </div>
+          <span id="add-picture" class="element">
+            <span class="fa fa-picture-o"></span>
+            <h4>Picture</h4>
+          </span>
+          <div class="hide add-element">
+            <img src="assets/img/sample.jpg">
+          </div>
+
+          <span id="add-video" class="element">
+            <span class="fa fa-youtube-play"></span>
+            <h4>Video</h4>
+          </span>
+          <div class="hide add-element">
+            <iframe width="640" height="360" src="http://www.youtube.com/embed/KphWsnhZ4Ag?feature=player_detailpage" frameborder="0" allowfullscreen="true"></iframe>
+          </div>
+
+          <span id="add-navigation" class="element notavailable">
+            <span class="fa fa-bars"></span>
+            <h4>Navigation</h4>
+          </span>
+          <span id="add-center-component" class="element notavailable">
+            <span class="fa fa-crosshairs"></span>
+            <h4>Center</h4>
+          </span>
+          <span id="add-divider-component" class="element notavailable">
+            <span class="fa-stack">
+              <i class="fa fa-caret-up top-dot fa-stack-1x"></i>
+              <hr class="fa fa-stack-1x">
+              <i class="fa fa-caret-down bottom-dot fa-stack-1x"></i>
+            </span>
+            <h4>Divider</h4>
+          </span>
+          <span id="add-email-component" class="element email-modual-add">
+            <span class="fa fa-envelope"></span>
+            <h4>Email</h4>
+          </span>
+          <div class="hide add-element">
+            <form class="form email-modual">
+              <input class="form__input" type="text" id="name" placeholder="Name">
+            
+               <input class="form__input" type="email" id="email" placeholder="email@website.com">
+        
+               <textarea class="form__input" id="msg" placeholder="Message..." rows="7"></textarea>
+        
+               <input class="btn--default" type="submit" value="Submit">
+               <input class="btn--warning" type="reset" value="Reset">
+            </form>
+          </div>
+          
+          <span id="add-tabs-component" class="element hide">
+            <span class="fa icon-tabs"></span>
+            <h4>Tabs</h4>
+          </span>
+          <div class="hide add-element">
+            <ul class="tabs tabs-modual" align="center">
+              <li>
+                <input type="radio" name="tabs" id="tab1">
+                <label for="tab1">Tab 1</label>
+                <div id="tab-content1" class="tab-content">
+                  <p>Tab 1</p>
+                  <!-- Your content goes here -->
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">Tab 2</label>
+                <div id="tab-content2" class="tab-content">
+                  <p>Tab 2</p>
+                  <!-- Your content goes here -->
+                </div>
+              </li>
+              <li>
+                <input type="radio" checked="true" name="tabs" id="tab3">
+                <label for="tab3">Tab Current</label>
+                <div id="tab-content3" class="tab-content">
+                  <p>Current active tab</p>
+                  <!-- Your content goes here -->   
+                </div>
+              </li>
+            </ul>
+          </div>
+          <span id="add-slider-component" class="element notavailable">
+            <span class="fa icon-slider"></span>
+            <h4>Slider Gallery</h4>
+          </span>
+          <span id="add-search-component" class="element notavailable hide">
+            <span class="fa-stack">
+              <i class="fa fa-circle-thin fa-stack-1x"></i>
+              <i class="fa fa-search fa-stack-1x"></i>
+            </span>
+            <h4>Search</h4>
+          </span>
+          <span id="add-textbox-element" class="element">
+            <span class="fa icon-textbox"></span>
+            <h4>Textbox</h4>
+          </span>
+          <div class="hide add-element">
+            <input type="text" class="textbox form__input">
+          </div>
+
+          <span id="add-textarea-element" class="element">
+            <span class="fa icon-textarea"></span>
+            <h4>Textarea</h4>
+          </span>
+          <div class="hide add-element">
+            <textarea class="textarea form__input"></textarea>
+          </div>
+
+          <span id="add-select-element" class="element">
+            <span class="fa icon-select"></span>
+            <h4>Select</h4>
+          </span>
+          <div class="hide add-element">
+            <select class="select-element">
+              <option value="placer">placer</option>
+            </select>
+          </div>
+          <span id="add-table" class="element notavailable hide">
+            <span class="fa fa-table"></span>
+            <h4>Table</h4>
+          </span>
+          <span id="add-audio" class="element notavailable hide">
+            <span class="fa fa-volume-up"></span>
+            <h4>Audio</h4>
+          </span>
+          <span id="add-icon" class="element iconsforlayout">
+            <span class="fa fa-gift"></span>
+            <h4>Icon</h4>
+          </span>
+          <span id="add-custom-html" class="element customhtml-modual">
+            <span class="fa fa-code"></span>
+            <h4>Custom</h4>
+          </span>
+        </div>
+        <!-- Styles Modual -->
+        <div id="stylescontent" class="droppable hide">
+          <div align="center">
+            <input type="text" class="global-style">
+            <a href="javascript:void(0)" id="confirm-style">
+              <span class="fa fa-check"></span>
+            </a>
+          </div>
+
+          <div id="styleeffects" class="fill" align="center">
+            <input type="radio" id="b-event" name="styles" checked>
+            <label for="b-event">Basic</label>
+            <input type="radio" id="h-m-event" name="styles">
+            <label for="h-m-event">:hover</label>
+            <input type="radio" id="a-m-event" name="styles">
+            <label for="a-m-event">:active</label>
+            <input type="radio" id="f-m-event" name="styles">
+            <label for="f-m-event">:focus</label>
+          </div>
+
+          <header id="background-style" class="enabledoption">
+            <span class="fa fa-check-square-o"></span> background
+          </header>
+          <div class="drop">
+            <input class="picker" type="text">
+            <div class="place-picker"></div>
+          </div>
+          <header id="typography-style">
+            <span class="fa fa-square-o"></span> typography
+          </header>
+          <div class="drop hide">
+            Typography coming soon...
+          </div>
+          <header id="border-style">
+            <span class="fa fa-square-o"></span> border
+          </header>
+          <div class="drop hide">
+            Border coming soon...
+          </div>
+          <header id="advanced-style">
+            <span class="fa fa-square-o"></span> advanced
+          </header>
+          <div class="drop hide">
+            advanced coming soon...
+          </div>
+        </div>
+        <!-- Settings Modual -->
+        <div id="settingsmodual" class="droppable hide">
+          <header id="offline-storage">
+            <span class="fa fa-square-o"></span> Offline Storage
+          </header>
+        </div>
+      </div>
+
+      <!-- FunctionBar's Header -->
+      <div id="handlesbar">
+        <div id="handlesbar-page1">
+          <a id="moveprev" title="Select Previous Element [Up]" href="javascript:void(0)">
+            <span class="fa fa-angle-up"></span>
+          </a> 
+          <a id="movenext" title="Select Next Element[Down]" href="javascript:void(0)">
+            <span class="fa fa-angle-down"></span>
+          </a> 
+          <a id="toparent" title="Select Parent" href="javascript:void(0)">
+            <span class="fa fa-caret-square-o-up"></span>
+          </a> 
+          <a id="tochild" title="Select First Index" href="javascript:void(0)">
+            <span class="fa fa-caret-square-o-down"></span>
+          </a> 
+          <a id="addelement" title="Add Element [Insert]" href="javascript:void(0)">
+            <span class="fa fa-plus"></span>
+          </a> 
+          <a id="editelement" title="Edit Element [Dblclick]" href="javascript:void(0)">
+            <span class="fa fa-edit"></span>
+          </a> 
+          <a id="delelement" title="Delete Element [Delete]" href="javascript:void(0)">
+            <span class="fa fa-times"></span>
+          </a> 
+          <a id="deselectelement" title="Deselect Element" href="javascript:void(0)">
+            <span class="fa fa-eraser"></span>
+          </a> 
+          <a id="styleelement" title="Style Element [Ctrl+M]" href="javascript:void(0)">
+            <span class="fa fa-magic"></span>
+          </a> 
+          <a id="moresettings" title="More Settings" href="javascript:void(0)">
+            <strong>...</strong>
+          </a>
+        </div>
+
+        <div id="handlesbar-page2" class="hide">
+          <a id="backsettings" title="Move Back" href="javascript:void(0)">
+            <span class="fa fa-angle-left"></span>
+          </a> 
+          <a id="openpages" class="hide" title="Pages" href="javascript:void(0)">
+            <span class="fa fa-bars"></span>
+          </a>
+          <a id="new-layout" title="New Layout [Ctrl+N]" href="javascript:void(0)">
+            <span class="fa fa-file-text"></span>
+          </a> 
+          <a id="save-layout" class="hide" title="Save to Cloud [Ctrl+S]" href="javascript:void(0)">
+            <span class="fa fa-archive"></span>
+          </a> 
+          <a id="export-layout" title="Export as file [Ctrl+E]" href="javascript:alert(0)">
+            <span class="fa fa-download"></span>
+          </a> 
+          <a id="settings" class="hide" title="Settings" href="javascript:void(0)">
+            <span class="fa fa-cog"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- This acts as your body when designing -->
+    <div id="dynamic-storage" contenteditable="false">
+      <div class="grid">
+        <header class="grid__col--12 panel--padded--centered" role="banner"> 
+          <a class="site-logo" href="javascript:void(0)">
+            <b class="srt">Poly - UI Toolkit</b>
+          </a>
+          <nav class="navbar" role="navigation">
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+              <b class="srt">Toggle</b>
+            </span>   
+            <ul class="nav is-collapsed-mobile" role="navigation">
+              <li class="nav__item"><a href="#type">Typography</a></li>
+              <li class="nav__item"><a href="#buttons">Buttons</a></li>
+              <li class="nav__item"><a href="#forms">Form</a></li>
+              <li class="nav__item"><a href="#images">Images</a></li>
+              <li class="nav__item"><a href="#grid">Grid</a></li>
+              <li class="nav__item--current"><a href="#nav">Navigation</a></li>
+              <!-- Current Page Class Style -->
+              <!-- <li class="nav__item--current"><a href="#nav">Navigation</a></li> -->
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="grid is-hidden-mobile">
+        <div class="grid__col--12">
+          <img class="img--hero" src="assets/img/hero.jpg" alt="Poly - A simple UI Kit">
+        </div>
+      </div>
+
+      <h4 id="type" class="grid">Typography</h4>
+
+      <div class="grid">
+        <div class="centered grid__col--8">
+          <h1 class="headline-primary--grouped">Take a look at this amazing headline</h1>
+          <h2 class="headline-secondary--grouped">Don't forget about the subtitle</h2>
+          <p>This is a typical paragraph for the UI Kit. <a href="#">Here is what a link might look like</a>. The typical font family for this kit is Helvetica Neue.  This kit is intended for clean and refreshing web layouts. No jazz hands here, just the essentials to make dreams come true, with minimal clean web design. The kit comes fully equipped with everything from full responsive media styling to buttons to form fields. <em>I enjoy using italics as well from time to time</em>. Fell free to create the most amazing designs ever with this kit. I truly hope you enjoy not only the kit but this amazing paragraph as well. :)</p>
+          <blockquote>You know what really gets me going? A really nice set of block quotes.  That's right, block quotes that say, "Hey, I'm an article you want to read and nurture."</blockquote>
+        </div>
+      </div>
+      
+      <h4 id="buttons" class="grid">Buttons</h4>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <a class="btn--default" href="#">Button Default</a>
+          <a class="btn--success" href="#">Button Success</a>
+          <a class="btn--error" href="#">Button Error</a>
+          <button class="btn--warning">Button Warning</button>
+          <button class="btn--info">Button Info</button>
+        </div>
+      </div>
+           
+      <h4 id="forms" class="grid">Form Elements</h4>
+      
+      <div class="grid">
+        <div class="grid__col--7"> 
+          <form class="form">
+            <label class="form__label--hidden" for="name">Name:</label> 
+            <input class="form__input" type="text" id="name" placeholder="Name">
+          
+             <label class="form__label--hidden" for="email">Email:</label>
+             <input class="form__input" type="email" id="email" placeholder="email@website.com">
+      
+             <label class="form__label--hidden" for="msg">Message:</label>
+             <textarea class="form__input" id="msg" placeholder="Message..." rows="7"></textarea>
+      
+             <input class="btn--default" type="submit" value="Submit">
+             <input class="btn--warning" type="reset" value="Reset">
+          </form>
+        </div>
+        <div class="grid__col--4">
+          <img class="img--avatar" src="assets/img/avatar.png" alt="Avatar">
+          <form>
+            <label class="form__label--hidden" for="username">Username:</label> 
+            <input class="form__input" type="text" id="username" placeholder="Username">
+            <label class="form__label--hidden" for="password">Password:</label>
+            <input class="form__input" type="password" id="password" placeholder="Password">
+            <input class="form__btn" type="submit" value="Login">
+          </form>
+        </div>
+      </div>
+
+      <h4 id="images" class="grid">Images</h4>
+
+      <div class="grid">
+        <div class="grid__col--5">
+          <img src="assets/img/sample.jpg" alt="sample image">
+        </div>
+        <div class="grid__col--5">
+          <img class="img--wrap" src="assets/img/sample.jpg" alt="sample image">
+        </div>
+        <div class="grid__col--2">
+          <img class="img--avatar" src="assets/img/avatar.png" alt="Avatar">
+        </div>
+      </div>
+
+      <h4 id="grid" class="grid">Grid System</h4>
+
+      <div class="theme__poly">
+        <div class="grid">
+          <div class="grid__col--12">.grid__col--12</div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--6">.grid__col--6</div>
+          <div class="grid__col--6">.grid__col--6</div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--4">.grid__col--4</div>
+          <div class="grid__col--4">.grid__col--4</div>
+          <div class="grid__col--4">.grid__col--4</div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--3">.grid__col--3</div>
+          <div class="grid__col--3">.grid__col--3</div>
+          <div class="grid__col--3">.grid__col--3</div>
+          <div class="grid__col--3">.grid__col--3</div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--5">.grid__col--5</div>
+          <div class="grid__col--7">.grid__col--7</div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--8">.grid__col--8</div>
+          <div class="grid__col--4">.grid__col--4</div>
+        </div>
+        <div class="grid">
+          <div class="centered grid__col--7">.centered .grid__col--7</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--7">
+          <h4 id="nav">Navigation</h4>
+          <ul class="nav" role="navigation">
+            <li class="nav__item"><a href="#">Nav Link</a></li>
+            <li class="nav__item"><a href="#">Nav Link 2</a></li>
+            <li class="nav__item--current"><a href="#">Nav Current</a></li>
+          </ul>
+          <p>This is what the navigation menu looks like when the screen is at 769px or higher. When the screen is less than 769px, you will have the option to display a toggle menu icon.</p>
+        </div>
+
+        <div class="grid__col--4">
+          <h4>Offcanvas Menu</h4>
+          <div class="offcanvas">
+            <span class="icn--close">
+              <b class="srt">close</b>
+            </span>
+            <ul class="menu" role="navigation">
+              <a class="menu__link" href="#">Link 1</a>
+              <a class="menu__link" href="#">Link 2</a>
+              <a class="menu__link" href="#">Link 3</a>
+              <a class="menu__link--end" href="#">Link 4</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      // Toggle Menu for Phones
+      $("#toggle").click(function() {
+        $(this).next(".nav").toggleClass("is-collapsed-mobile");
+      });
+      
+      // Handles Navigation Style Classes
+      $(".nav__item").on("click", function() {
+        $(this).parent().find("li").removeClass("nav__item--current").addClass("nav__item");
+        $(this).addClass("nav__item--current").removeClass("nav__item");
+      });
+    </script>
+  </body>
+</html>

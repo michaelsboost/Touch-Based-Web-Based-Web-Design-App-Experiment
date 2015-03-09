@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic Collapsible TreeView</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='initial-scale=1.0'>
+<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
+<style type='text/css'>
+.tree ul li ul {
+  display: none;
+}
+.tree ul li {
+  cursor: pointer;
+}
+</style>
+<script type='text/javascript'>
+$(document).ready(function() {
+  $(".tree ul li > span").each(function() {
+    $(this).on('click', function(e) {
+      $(e.target).next().filter("ul").toggle();
+    });
+  });
+});
+</script>
+</head>
+<body>
+  <div class="tree">
+    <ul>
+      <li>
+        <span>Parent 1</span>
+        <ul>
+          <li>
+            <span>Parent child 1+1</span>
+            <ul>
+              <li>
+                <span>Parent child 2+1</span>
+                <ul>
+                  <li>
+                    <span>Parent child 3+1</span>
+                    <ul>
+                      <li>
+                        <span>Child 1</span>
+                      </li>
+                      <li>
+                        <span>Child 2</span>
+                      </li>
+                      <li>
+                        <span>Child 3</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Parent child 3+1</span>
+                  </li>
+                  <li>
+                    <span>Parent child 3+1</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Parent child 1+1</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Parent 1</span>
+        <ul>
+          <li>
+            <span>Parent child 1+1</span>
+            <ul>
+              <li>
+                <span>Parent child 2+1</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>Parent child 2+1</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

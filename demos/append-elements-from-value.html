@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><style type="text/css">body {
+  color: #fff;
+  font: 16px arial;
+  background-color: #222;
+}
+
+.contenu > div:nth-child(1) {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.enfants > div {
+  width: 80%;
+  background-color: #4a4;
+  padding: 1em 0;
+}
+
+.ajouter-enfants {
+  color: #fff;
+  font: 16px arial;
+  background-color: #0aa;
+  margin: 1em;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 1em;
+}
+
+.ajouter-enfants:focus {
+  background-color: #0cc;
+}</style>
+
+
+<title>Detect Element Children (Numeric)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <div class="contenu" align="center">
+    <div>
+      Value number = .enfants children
+    </div>
+    <input min="0" class="ajouter-enfants" value="0" type="number">
+    <div class="enfants"><div>1</div></div>
+  </div>
+
+<script>$(document).ready(function() {
+  // Value number = .enfants children
+  $(".ajouter-enfants").on('keyup change', function() {
+    var content = '';
+    var numDivs = $(this).val();
+    var i;
+    
+    for (i = 1; i <= numDivs; i += 1) {
+      content += '<div>' + i + '</div>';
+    }
+    
+    $('.enfants').html(content);
+  });
+});</script></body>
